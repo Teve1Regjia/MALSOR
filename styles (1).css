@@ -1,0 +1,114 @@
+/* Ngjyra kryesore */
+:root {
+  --primary-color: #007bff;    /* Ngjyra kryesore (blu) */
+  --secondary-color: #0056b3; /* Ngjyra sekondare (blu e errët) */
+  --background-color: #f4f4f4; /* Sfondi (gri e lehtë) */
+  --text-color: #333;         /* Ngjyra e tekstit */
+  --container-bg: #ffffff;    /* Sfondi i kutisë (bardhë) */
+  --button-hover: #0056b3;    /* Ngjyra e butonit kur kalojmë sipër */
+  --border-color: #ccc;       /* Ngjyra e kufijve */
+  --heading-color: #004085;   /* Ngjyra e titujve (blu e errët) */
+}
+
+/* Stilet bazë */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: var(--container-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--heading-color);
+  margin-bottom: 10px;
+}
+
+textarea, input, button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+textarea {
+  resize: none;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+input {
+  background-color: var(--container-bg);
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--heading-color);
+  margin-top: 20px;
+}
+
+/* Responzivitet për tabletë dhe celular */
+@media (max-width: 768px) {
+  body {
+    margin: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  textarea, input, button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
+
+/* Responzivitet për celular të vogël */
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 1.2rem;
+  }
+
+  textarea, input, button {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
